@@ -1,10 +1,17 @@
+import os
 from setuptools import setup, find_packages
+
+# Membaca README.md tanpa memicu FileNotFoundError saat diproses pip
+long_description = ""
+if os.path.exists("README.md"):
+    with open("README.md", encoding="utf-8") as f:
+        long_description = f.read().strip()
 
 setup(
     name='openvoice',
     version='2.0.0',
     description='Instant voice cloning by MyShell',
-    long_description=open('README.md', encoding='utf-8').read().strip() if open('README.md') else '',
+    long_description=long_description,
     long_description_content_type='text/markdown',
     keywords=['text-to-speech', 'tts', 'voice-clone', 'zero-shot-tts'],
     url='https://github.com/ev0xP/OpenVoice',
@@ -30,5 +37,4 @@ setup(
         'open-clip-torch>=2.20.0',
     ],
     zip_safe=False
-)
 )
