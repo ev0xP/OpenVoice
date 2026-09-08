@@ -12,6 +12,6 @@ setup(
         "faster-whisper>=0.10.0",
         "wavmark>=0.0.3",
         "open-clip-torch>=2.20.0",
-        "seperate-anything>=0.1.0",
+        "separate-anything>=0.1.0",
     ],
 )
