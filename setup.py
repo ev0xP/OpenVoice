@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="openvoice",
     version="2.0.0",
-    packages=find_packages(),
+    packages=find_packages(include=["openvoice", "openvoice.*"]),
     include_package_data=True,
     install_requires=[
         "torch>=2.0.0",
